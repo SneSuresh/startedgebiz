@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <!-- Rocket Body -->
+        <path d="M100,20 C130,20 150,60 150,100 L150,160 L50,160 L50,100 C50,60 70,20 100,20" fill="#FFFFFF" />
+        
+        <!-- Rocket Window -->
+        <circle cx="100" cy="80" r="15" fill="#9400d3" />
+        
+        <!-- Rocket Fins -->
+        <path d="M50,160 L30,180 L50,180 L50,160" fill="#FFFFFF" />
+        <path d="M150,160 L170,180 L150,180 L150,160" fill="#FFFFFF" />
+        
+        <!-- Rocket Bottom -->
+        <path d="M60,160 L85,190 L115,190 L140,160" fill="#ff69b4" />
+        
+        <!-- Flame -->
+        <path d="M85,190 C85,190 100,220 115,190" fill="#FFD700" />
+    </g>
+</svg> 

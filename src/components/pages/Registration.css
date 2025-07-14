@@ -1,0 +1,265 @@
+.registration-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #0088b9, #00bf8f);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  margin-top: 40px;
+}
+
+.registration-form {
+  background: #fff;
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 136, 185, 0.13), 0 1.5px 6px rgba(0, 191, 143, 0.10);
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  border-top: 4px solid #00bf8f;
+}
+
+.registration-form h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  background: linear-gradient(90deg, #0088b9 0%, #00bf8f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 1px;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #0088b9;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem 0.5rem 0.5rem 0.5rem;
+  border: none;
+  border-bottom: 2px solid #00bf8f;
+  border-radius: 0;
+  font-size: 1rem;
+  background: transparent;
+  color: #222;
+  transition: border-color 0.3s;
+  box-shadow: none;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-bottom: 2.5px solid #0088b9;
+  background: transparent;
+}
+
+.form-group input.error {
+  border-bottom: 2px solid #ff4d4d;
+}
+
+.error-message {
+  color: #ff4d4d;
+  font-size: 13px;
+  margin-top: 2px;
+  display: block;
+}
+
+.phone-group {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin-bottom: 0;
+}
+
+.phone-code-container {
+  width: 35%;
+}
+
+.phone-code {
+  width: 100%;
+  padding: 0.7rem 0.5rem;
+  border: none;
+  border-bottom: 2px solid #00bf8f;
+  border-radius: 0;
+  font-size: 1rem;
+  background: transparent;
+  color: #222;
+  font-weight: 500;
+  height: 44px;
+  appearance: none;
+  cursor: pointer;
+}
+
+.phone-code:focus {
+  outline: none;
+  border-bottom: 2.5px solid #0088b9;
+}
+
+.phone-input {
+  flex: 1;
+}
+
+.phone-input input {
+  width: 100%;
+  padding: 0.7rem 0.5rem;
+  border: none;
+  border-bottom: 2px solid #00bf8f;
+  border-radius: 0;
+  font-size: 1rem;
+  color: #222;
+  background: transparent;
+  height: 44px;
+}
+
+.phone-input input:focus {
+  outline: none;
+  border-bottom: 2.5px solid #0088b9;
+}
+
+.phone-input input::placeholder {
+  color: #888;
+}
+
+.password-input-container {
+  position: relative;
+}
+
+.password-input-container i {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #00bf8f;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.password-input-container i:hover {
+  color: #0088b9;
+}
+
+.create-account-btn {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(90deg, #0088b9 0%, #00bf8f 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 16px rgba(0, 191, 143, 0.10);
+}
+
+.create-account-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 136, 185, 0.13);
+}
+
+.create-account-btn:active {
+  transform: translateY(0);
+}
+
+.sign-in-text {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #666;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.sign-in-text a {
+  color: #0088b9;
+  text-decoration: none;
+  font-weight: 700;
+  margin-left: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.sign-in-text a:hover {
+  color: #00bf8f;
+  text-decoration: underline;
+}
+
+/* Close (X) button */
+.registration-form .close-btn {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #00bf8f;
+  cursor: pointer;
+  z-index: 2;
+  transition: color 0.2s;
+}
+.registration-form .close-btn:hover {
+  color: #0088b9;
+}
+
+.password-requirements {
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+  background: rgba(255, 77, 77, 0.05);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 77, 77, 0.2);
+}
+
+.password-requirements .error-message {
+  display: block;
+  color: #ff4d4d;
+  font-size: 0.85rem;
+  margin: 0.25rem 0;
+  font-weight: 500;
+  position: relative;
+  padding-left: 1.25rem;
+}
+
+.password-requirements .error-message::before {
+  content: '•';
+  position: absolute;
+  left: 0.5rem;
+  color: #ff4d4d;
+}
+
+@media (max-width: 576px) {
+  .registration-container {
+    padding: 1rem;
+  }
+  .registration-form {
+    padding: 1.2rem;
+    max-width: 98vw;
+  }
+  .registration-form h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+  }
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  .phone-group {
+    flex-direction: row;
+    gap: 8px;
+  }
+  .phone-code-container {
+    width: 40%;
+  }
+} 

@@ -1,0 +1,370 @@
+/* Global color variables */
+:root {
+  --primary-color: #002349;    /* Dark navy blue - classic and authoritative */
+  --secondary-color: #957C3D;  /* Rich gold - for elegance and prestige */
+  --accent-color: #8B0000;     /* Deep burgundy - for subtle accents */
+  --text-primary: #333333;     /* Dark gray for main text */
+  --text-secondary: #666666;   /* Medium gray for secondary text */
+  --background-light: #FFFFFF; /* Clean white for backgrounds */
+  --background-off: #F5F5F5;   /* Light gray for alternate sections */
+  --border-color: #E5E5E5;     /* Subtle border color */
+  --gradient-start: #0088b9;
+  --gradient-end: #00bf8f;
+  --background: #f8f9fa;
+}
+
+/* Global styles */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #333;
+  line-height: 1.5;
+  background-color: var(--background-light);
+}
+
+.page-content {
+  min-height: calc(100vh - 85px - 200px);
+  padding: 2rem 0;
+  background-color: var(--background-light);
+}
+
+/* Section styling */
+.section {
+  padding: 4rem 0;
+}
+
+.section-colored {
+  background-color: var(--background-off);
+}
+
+/* Button styling */
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+.btn-primary:hover {
+  background-color: #003366;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+.btn-secondary:hover {
+  background-color: #A88C4B;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Card styling */
+.card {
+  border: 1px solid var(--border-color);
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+}
+
+/* Links */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+/* Form elements */
+.form-control {
+  border-radius: 2px;
+  border: 1px solid var(--border-color);
+  padding: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 0.2rem rgba(149, 124, 61, 0.25);
+}
+
+/* Container max-widths */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Responsive text */
+@media (max-width: 768px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.75rem; }
+  h3 { font-size: 1.5rem; }
+  body { font-size: 0.9rem; }
+}
+
+/* Animation classes */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Utility classes */
+.text-primary { color: var(--primary-color) !important; }
+.text-secondary { color: var(--secondary-color) !important; }
+.bg-primary { background-color: var(--primary-color) !important; }
+.bg-secondary { background-color: var(--secondary-color) !important; }
+.bg-light { background-color: var(--background-light) !important; }
+.bg-off { background-color: var(--background-off) !important; }
+
+/* Additional classic elements */
+.border-bottom {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.divider {
+  width: 50px;
+  height: 2px;
+  background-color: var(--secondary-color);
+  margin: 2rem auto;
+}
+
+.section-title {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 3rem;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background-color: var(--secondary-color);
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Add any additional styles you need here */
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  margin-top: 80px; /* Height of the fixed header */
+}
+
+.page-content {
+  padding: 2rem;
+  color: var(--text-primary);
+  background-color: var(--background);
+}
+
+.theme-toggle {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: 2px solid var(--text-primary);
+  background-color: var(--background);
+  color: var(--text-primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  padding: 0;
+  box-shadow: 0 2px 5px var(--shadow-color);
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 3px 8px var(--shadow-color);
+}
+
+.theme-toggle:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--nav-hover);
+}
+
+/* Add any global styles below */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Theme transition effects */
+*, *::before, *::after {
+  transition: background-color 0.3s ease,
+              color 0.3s ease,
+              border-color 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+/* Toggle theme button */
+.toggle-theme {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 15px var(--shadow-color);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.toggle-theme:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px var(--shadow-color);
+}
+
+.toggle-theme:active {
+  transform: translateY(0);
+}
+
+/* Dark mode transitions */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode styles for main content */
+body.dark-mode .app {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+body.dark-mode main {
+  background-color: #1a1a1a;
+}
+
+body.dark-mode .section {
+  background-color: #2d2d2d;
+}
+
+body.dark-mode .card,
+body.dark-mode .info-card {
+  background-color: #2d2d2d;
+  border-color: #404040;
+}
+
+body.dark-mode .card-title,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+  color: #ffffff;
+}
+
+body.dark-mode .card-text,
+body.dark-mode p {
+  color: #e0e0e0;
+}
+
+body.dark-mode input,
+body.dark-mode textarea {
+  background-color: #333333;
+  color: #ffffff;
+  border-color: #404040;
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+  color: #888888;
+}
+
+body.dark-mode .form-group label {
+  color: #ffffff;
+}
