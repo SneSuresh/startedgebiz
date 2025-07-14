@@ -19,13 +19,13 @@ const Registration = () => {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
+
   // Password validation helper functions
   const hasUpperCase = (str) => /[A-Z]/.test(str);
   const hasLowerCase = (str) => /[a-z]/.test(str);
   const hasDigit = (str) => /\d/.test(str);
-  const hasSpecialChar = (str) => /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>/?]+/.test(str);
+  const hasSpecialChar = (str) => /[!@#$%^&*()_+\-=\\{};':"|,.<>/?\]]+/.test(str);
   const isValidLength = (str) => str.length >= 8;
-  const isAlphanumeric = (str) => /^[a-zA-Z0-9_]+$/.test(str);
 
   const validatePassword = (password) => {
     const errors = [];
@@ -253,10 +253,11 @@ const Registration = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSubmitted(true);
+    
     if (validateForm()) {
       // Handle form submission
       console.log('Form submitted:', formData);
+      setSubmitted(true); 
       setFormData({
         firstName: '',
         lastName: '',
@@ -267,7 +268,7 @@ const Registration = () => {
         confirmPassword: ''
       });
       setErrors({});
-      setSubmitted(false);
+      
     }
   };
 
@@ -275,7 +276,8 @@ const Registration = () => {
     <div className="registration-container">
       <form className="registration-form" onSubmit={handleSubmit}>
         <h2>Create Account</h2>
-        
+        {submitted && <p className="success-message">Registration successful!</p>}
+
         <div className="form-group">
           <label htmlFor="firstName">First Name</label>
           <input

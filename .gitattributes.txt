@@ -1,0 +1,9 @@
+# Auto normalize text files to LF in repo, CRLF on checkout (Windows)
+* text=auto
+
+# Force LF for specific file types (optional)
+*.js text eol=lf
+*.jsx text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+*.md text eol=lf

@@ -36,10 +36,10 @@ const Footer = () => {
           <h4>Follow Us On Social Media</h4>
           <p>Stay updated with our latest news and updates on social media.</p>
           <div className="social-links">
-            <a href="#" className="social-icon facebook"><i className="fab fa-facebook-f"></i></a>
-            <a href="#" className="social-icon twitter"><i className="fab fa-twitter"></i></a>
-            <a href="#" className="social-icon linkedin"><i className="fab fa-linkedin-in"></i></a>
-            <a href="#" className="social-icon instagram"><i className="fab fa-instagram"></i></a>
+            <a href="https://facebook.com/YourPage" className="social-icon facebook" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/YourProfile" className="social-icon twitter" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter"></i></a>
+            <a href="https://linkedin.com/in/YourProfile" className="social-icon linkedin" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin-in"></i></a>
+            <a href="https://instagram.com/YourProfile" className="social-icon instagram" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
           </div>
         </div>
       </div>
